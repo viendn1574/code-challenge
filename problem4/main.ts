@@ -1,5 +1,8 @@
 function sum_to_n_a(n: number): number {
     let sum = 0;
+    if (n <= 0) {
+        return 0;
+    }
     for (let i = 1; i <= n; i++) {
         sum += i;
     }
@@ -7,13 +10,20 @@ function sum_to_n_a(n: number): number {
 }
 
 function sum_to_n_b(n: number): number {
-    if (n === 1 || n === 0) {
+    if (n <= 0) {
+        return 0;
+    }
+
+    if (n === 1) {
         return n;
     }
     return n + sum_to_n_b(n - 1);
 }
 
 function sum_to_n_c(n: number): number {
+    if (n <= 0) {
+        return 0;
+    }
     return (n * (n + 1)) / 2;
 }
 
@@ -44,3 +54,9 @@ n = 1000000;
 console.log(`Sum from 1 to ${n} using method A: ${sum_to_n_a(n)}`);
 console.log(`Sum from 1 to ${n} using method B: ${sum_to_n_c(n)}`);
 //console.log(`Sum from 1 to ${n} using method C: ${sum_to_n_b(n)}`);
+
+// Test cases 5 input: -5
+n = -5;
+console.log(`Sum from 1 to ${n} using method A: ${sum_to_n_a(n)}`);
+console.log(`Sum from 1 to ${n} using method B: ${sum_to_n_b(n)}`);
+console.log(`Sum from 1 to ${n} using method C: ${sum_to_n_c(n)}`); 
