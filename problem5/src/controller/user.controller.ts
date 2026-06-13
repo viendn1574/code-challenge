@@ -40,7 +40,8 @@ export async function getUsers(req: Request, res: Response) {
             User.find(filter)
                 .sort({ createdAt: -1 })
                 .skip(skip)
-                .limit(limitNumber),
+                .limit(limitNumber)
+                .lean(),
             User.countDocuments(filter),
         ]);
 
