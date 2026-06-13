@@ -1,0 +1,14 @@
+{
+  "name": "problem4",
+  "version": "1.0.0",
+  "description": "Problem 4: Sum from 1 to n",
+  "scripts": {
+    "dev": "ts-node main.ts",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.3",
+    "ts-node": "^10.9.1",
+    "@types/node": "^20.10.5"
+  }
+}
